@@ -13,7 +13,7 @@ func main() {
 	intParams, _ := strconv.Atoi(params)
 
 	type Biodata struct {
-		Name      string `json:"Nama"`
+		Nama      string `json:"Nama"`
 		Alamat    string `json:"Alamat"`
 		Pekerjaan string `json:"Pekerjaan"`
 		Alasan    string `json:"Alasan Memilih Kelas Golang"`
@@ -42,7 +42,10 @@ func main() {
 			jsonData := biodatas[k]
 			// var showData Biodata
 			// _ = json.Unmarshal([]byte(jsonData), &showData)
-			fmt.Println(jsonData)
+			fmt.Println("Nama:", jsonData.Nama)
+			fmt.Println("Alamat:", jsonData.Alamat)
+			fmt.Println("Pekerjaan:", jsonData.Pekerjaan)
+			fmt.Println("Alasan Memilih Kelas Golang:", jsonData.Alasan)
 		}
 	}
 }
